@@ -1,0 +1,29 @@
+<div class="card card-body mb-2 mt-1" style="height:400px" >
+    <div class="row" > 
+      <div class="col-md-4">
+       <img [src]="products.image"  width="250" height="300">
+       
+      </div>      
+      <div class="col-sm-8">
+        
+      <h3 >{{products.title|uppercase}}</h3>
+      <div   >
+      <p>{{products.description}}</p>
+      <p>
+        {{products.price|currency:'USD'}}
+      </p>
+      <div style="margin-top: 5px;">
+        <button type="button" class="btn btn-primary" (click)="minus()" ><i class="fa fa-minus"></i></button>
+        <input type="text"  [value]="quantity"  style="width:fit-content">
+        <button type="button" class="btn btn-primary " (click)="plus()" ><i class="fa fa-plus"></i></button>
+        <h1>{{quantity}}</h1>
+      </div>
+      
+      <button class="btn btn-primary  mt-2 me-2" type="button" (click)="addtocart(products)">Add to Cart</button>
+      <button class="btn btn-primary" type="button" style="margin-top: 8px; padding-left: 10px;margin-left: 15px;">Buy</button>
+      </div> 
+    </div> 
+     </div>
+    </div>
+   
+      
